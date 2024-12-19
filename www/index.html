@@ -583,6 +583,7 @@ window.addEventListener('unload', function() {
                     <option value="oldest">古い順</option>
                 </select>
             </div>
+            
             <div id="postsList"></div>
             <div id="loadingSpinner" class="loading-spinner" style="display: none;">
                 <div class="spinner"></div>
@@ -611,6 +612,13 @@ window.addEventListener('unload', function() {
             </div>
         </div>
     </div>
+    
+    <!-- 背景色変更 -->
+    <div class="background-switcher">
+        <button onclick="document.body.style.backgroundColor = '#f0f8ff'">ライトブルー</button>
+        <button onclick="document.body.style.backgroundColor = '#ffe4e1'">ピンク</button>
+        <button onclick="document.body.style.backgroundColor = '#ffffff'">デフォルト</button>
+    </div>
 
     <!-- 削除確認モーダルウィンドウ -->
     <div id="deleteModal" class="modal">
@@ -630,5 +638,6 @@ window.addEventListener('unload', function() {
             </div>
         </div>
     </div>
+    
 </body>
 </html>
