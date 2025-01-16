@@ -58,7 +58,11 @@ function updateCharacterCount(inputId, counterId, maxLength) {
     input.on('input', () => {
         const length = input.val().length;
         const remain = maxLength - length;
-        counter.text(`残り${remain}文字`);
+        if(remain >= 0){
+            counter.text(`残り${remain}文字`);
+        } else {
+            counter.text(`文字数上限を${0-remain}文字超えています`);
+        } 
     
         if (remain < 0) {
             counter.addClass('error');
